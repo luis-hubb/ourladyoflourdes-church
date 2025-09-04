@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import useStore from '@/store/useStore';
-import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useStore();
@@ -18,7 +17,7 @@ const Navbar = () => {
       if (isVisible !== visible) {
         setVisible(isVisible);
       }
-      
+
       // Update scrolled state for styling changes
       const isScrolled = window.scrollY > 10;
       if (isScrolled !== scrolled) {
@@ -31,12 +30,12 @@ const Navbar = () => {
   }, [scrolled, visible]);
 
   const navItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '#home' },
     { name: 'Our History', href: '#our-history' },
     { name: 'Masses', href: '#masses-timing' },
     { name: 'Events', href: '#events' },
     { name: 'Associations', href: '#associations' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   const isActive = (href: string) => {
@@ -56,9 +55,16 @@ const Navbar = () => {
         window.location.href = '/' + href;
       } else {
         // If already on home page, just scroll to the section
-        const element = document.getElementById(href.substring(1));
+        const sectionId = href.substring(1);
+        const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // Add a small delay to ensure mobile menu closes first
+          setTimeout(() => {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }, 100);
         }
       }
     }
@@ -66,18 +72,17 @@ const Navbar = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="fixed top-0 left-0 right-0 z-50 flex justify-center"
       initial={{ y: -100 }}
       animate={{ y: visible ? 0 : -100 }}
       transition={{ duration: 0.3 }}
     >
       <nav
-        className={`mt-4 mx-4 max-w-7xl w-full rounded-lg ${
-          scrolled 
-            ? 'bg-white/90 shadow-lg backdrop-blur-md' 
+        className={`mt-4 mx-4 max-w-7xl w-full rounded-lg ${scrolled
+            ? 'bg-white/90 shadow-lg backdrop-blur-md'
             : 'bg-white/80 shadow-md backdrop-blur-sm'
-        } transition-all duration-300`}
+          } transition-all duration-300`}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -85,8 +90,8 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="flex items-center group"
                 aria-label="Our Lady of Lourdes Church Home"
               >
@@ -99,26 +104,42 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    isActive(item.href)
-                      ? 'text-pastel-gold bg-pastel-gold/10'
-                      : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
-                  }`}
-                  onClick={() => handleClick(item.href)}
-                >
-                  {item.name}
-                </Link>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${isActive(item.href)
+                        ? 'text-pastel-gold bg-pastel-gold/10'
+                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
+                      }`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(item.href);
+                    }}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${isActive(item.href)
+                        ? 'text-pastel-gold bg-pastel-gold/10'
+                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
+                      }`}
+                    onClick={() => handleClick(item.href)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
-              <Button 
+              {/* <Button 
                 className="ml-4 bg-gradient-to-r from-pastel-gold to-amber-600 hover:from-amber-600 hover:to-pastel-gold text-white shadow-md hover:shadow-lg transition-all duration-300"
                 onClick={() => handleClick('#give')}
               >
                 <Heart className="w-4 h-4 mr-2" />
                 Give Now
-              </Button>
+              </Button> */}
             </div>
 
             {/* Mobile menu button */}
@@ -156,21 +177,38 @@ const Navbar = () => {
             >
               <div className="px-4 py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-b-lg">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`block px-5 py-4 rounded-md text-base font-medium transition-all duration-300 ${
-                      isActive(item.href)
-                        ? 'text-pastel-gold bg-pastel-gold/10'
-                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
-                    }`}
-                    onClick={() => handleClick(item.href)}
-                    role="menuitem"
-                  >
-                    {item.name}
-                  </Link>
+                  item.href.startsWith('#') ? (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className={`block px-5 py-4 rounded-md text-base font-medium transition-all duration-300 ${isActive(item.href)
+                          ? 'text-pastel-gold bg-pastel-gold/10'
+                          : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
+                        }`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleClick(item.href);
+                      }}
+                      role="menuitem"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`block px-5 py-4 rounded-md text-base font-medium transition-all duration-300 ${isActive(item.href)
+                          ? 'text-pastel-gold bg-pastel-gold/10'
+                          : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
+                        }`}
+                      onClick={() => handleClick(item.href)}
+                      role="menuitem"
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
-                <div className="px-5 py-4">
+                {/* <div className="px-5 py-4">
                   <Button 
                     className="w-full bg-gradient-to-r from-pastel-gold to-amber-600 hover:from-amber-600 hover:to-pastel-gold text-white shadow-md hover:shadow-lg transition-all duration-300 py-6 text-lg"
                     onClick={() => handleClick('#give')}
@@ -178,7 +216,7 @@ const Navbar = () => {
                     <Heart className="w-5 h-5 mr-2" />
                     Give Now
                   </Button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           )}
