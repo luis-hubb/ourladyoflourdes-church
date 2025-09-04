@@ -78,15 +78,26 @@ const MessageSection = () => {
             variants={itemVariants} 
             className="mt-16 bg-white/50 backdrop-blur-sm rounded-lg p-8 shadow-lg"
           >
-            <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">From Pastor John</h3>
-            <p className="font-opensans text-lg text-gray-700 mb-6 leading-relaxed">
-              In a world that often feels uncertain, our church stands as a beacon of hope and community. 
-              We're not perfect people, but we serve a perfect God who loves us unconditionally.
-              No matter where you are in your faith journey, there's a place for you here.
-            </p>
-            <p className="font-opensans text-lg text-gray-700 leading-relaxed">
-              I invite you to join us this Sunday to experience the warmth of our community and the power of worship.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img 
+                  src="/images/prem_kumar.jpg" 
+                  alt="Rev. Fr. Prem Kumar D'souza"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
+                />
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">From Fr. Prem Kumar D'souza</h3>
+                <p className="font-opensans text-lg text-gray-700 mb-6 leading-relaxed">
+                  In a world that often feels uncertain, Our Lady of Lourdes Church stands as a beacon of hope and community. 
+                  We're not perfect people, but we serve a perfect God who loves us unconditionally.
+                  No matter where you are in your faith journey, there's a place for you here.
+                </p>
+                <p className="font-opensans text-lg text-gray-700 leading-relaxed">
+                  I invite you to join us this Sunday to experience the warmth of our community and the power of worship.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>

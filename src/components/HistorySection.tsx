@@ -67,6 +67,37 @@ const HistorySection = () => {
               <p className="text-gray-600 mt-2">Year Bhatkal was given to the Franciscans "in perpetuum"</p>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img 
+                  src="/images/Br. Xavier Durairaj (Minister Provincial).jpg" 
+                  alt="Br. Xavier Durairaj - Minister Provincial"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
+                  Franciscan Leadership
+                </h3>
+                <p className="text-lg font-semibold text-pastel-gold mb-3">
+                  Br. Xavier Durairaj - Minister Provincial
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Under the guidance of our Minister Provincial and the Franciscan Order of St. Thomas Province, 
+                  our parish continues to serve the community with the spirit of St. Francis - embracing simplicity, 
+                  caring for the poor, and fostering a deep love for all of God's creation.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
