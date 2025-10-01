@@ -31,6 +31,7 @@ const Index = () => {
       <MassTimings />
       <HighlightCards />
       <MessageSection />
+      <AssociationsSection />
       {/* <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <PriestInfo />
@@ -38,7 +39,6 @@ const Index = () => {
       </div> */}
       <TestimonialsSection />
       {/* <LeadershipSection /> */}
-      <AssociationsSection />
       <EventsSection />
       {/* <GiveSection /> */}
       <Footer />

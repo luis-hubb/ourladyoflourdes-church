@@ -34,7 +34,7 @@ const AssociationCard = ({
         <h3 className="font-playfair text-xl font-semibold text-primary mb-2">{name}</h3>
         <p className="text-soft-gray text-sm mb-4">{description}</p>
         
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           {meetingTime && (
             <div className="flex items-center text-sm text-gray-600">
               <Calendar className="h-4 w-4 mr-2 text-gold" />
@@ -64,7 +64,7 @@ const AssociationCard = ({
               </a>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   </motion.div>
@@ -73,7 +73,7 @@ const AssociationCard = ({
 const AssociationsSection = () => {
   const associations = [
     {
-      name: "Catholic Youth Movement (CYM)",
+      name: "1.	Lourdes Ward.",
       description: "A vibrant youth organization focused on spiritual growth, community service, and leadership development.",
       meetingTime: "Every Sunday after Mass",
       meetingPlace: "Parish Hall",
@@ -81,7 +81,7 @@ const AssociationsSection = () => {
       contactNumber: "+91 9876543210"
     },
     {
-      name: "Legion of Mary",
+      name: "2.	St. Antony Ward.",
       description: "Dedicated to promoting devotion to the Blessed Virgin Mary and fostering spiritual growth through prayer and service.",
       meetingTime: "Every Saturday at 4:00 PM",
       meetingPlace: "Legion of Mary Room",
@@ -89,7 +89,7 @@ const AssociationsSection = () => {
       contactNumber: "+91 9876543211"
     },
     {
-      name: "St. Vincent de Paul Society",
+      name: "3.	St. Francis Ward.",
       description: "Serving the poor and needy through charitable works and social service activities.",
       meetingTime: "First Sunday of every month",
       meetingPlace: "Society Office",
@@ -97,7 +97,7 @@ const AssociationsSection = () => {
       contactNumber: "+91 9876543212"
     },
     {
-      name: "Parish Choir",
+      name: "4.	St. Mother Teresa Ward.",
       description: "Enhancing liturgical celebrations through beautiful music and hymns.",
       meetingTime: "Wednesday and Saturday at 6:00 PM",
       meetingPlace: "Church Choir Loft",
@@ -105,7 +105,7 @@ const AssociationsSection = () => {
       contactNumber: "+91 9876543213"
     },
     {
-      name: "Catholic Women's Association",
+      name: "5.	St. Sebastian Ward.",
       description: "Empowering women through spiritual, social, and educational activities.",
       meetingTime: "Second Sunday of every month",
       meetingPlace: "Parish Hall",
@@ -113,7 +113,7 @@ const AssociationsSection = () => {
       contactNumber: "+91 9876543214"
     },
     {
-      name: "Altar Servers Association",
+      name: "6.	St. Clare Ward.",
       description: "Training and organizing youth to serve at the altar during Mass and other liturgical celebrations.",
       meetingTime: "Every Saturday at 5:00 PM",
       meetingPlace: "Church Sacristy",
@@ -133,7 +133,7 @@ const AssociationsSection = () => {
           className="max-w-4xl mx-auto text-center mb-12"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Parish Associations
+            Parish Wards
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-gray-600 text-lg mb-8">
