@@ -6,59 +6,80 @@ import { Link } from 'react-router-dom';
 
 const MassTimings = () => {
   const massSchedule = {
-    general: [
-      { day: 'Sunday', time: '7:30 AM & 9:30 AM' },
-      { day: 'Weekdays', time: '6:30 AM' },
-      { day: 'Saturday', time: '6:30 AM & 6:00 PM (Sunday Mass)' }
+    WeekdaysMasses: [
+      { day: 'Monday', time: '06:45am (Konkani)' },
+      { day: 'Wednessdar', time: '06:45am (Konkani)' },
+      { day: 'Thursday', time: '06:45am (Konkani)' },
+      { day: 'Saturday', time: '06:45am (Konkani)' },
+
     ],
-    boys: [
-      { day: 'Sunday', time: '8:00 AM' },
-      { day: 'Wednesday', time: '5:00 PM' },
-      { day: 'Friday', time: '5:00 PM' }
+    Novena: [
+      { day: 'Tuesday', time: '06:00pm (St. Antony – Konkani) ' },
+    
     ],
-    girls: [
-      { day: 'Sunday', time: '8:30 AM' },
-      { day: 'Tuesday', time: '5:00 PM' },
-      { day: 'Thursday', time: '5:00 PM' }
+    Holy_Mass_Adoration: [
+      { day: 'Friday', time: '06:00pm (Konkani)' },
     ],
-    seniors: [
-      { day: 'Sunday', time: '9:00 AM' },
-      { day: 'Monday', time: '5:00 PM' },
-      { day: 'Saturday', time: '5:00 PM' }
+    Sunday_Holy_Mass: [
+      { day: 'Sunday', time: '07:00am (Catechism)' },
+      { day: 'Sunday', time: '08:30am (Konkani)' },
+    ],
+     SpecialEnglishMass: [
+      { day: '1st Sunday Every Month ', time: '10:00am' },
     ]
   };
 
   const associations = [
     { 
       id: 'cym',
-      name: 'Catholic Youth Movement (CYM)', 
+      name: 'A) Parish Pastoral Council', 
       description: 'Promoting Catholic values and community service' 
     },
     { 
       id: 'st-vincent-de-paul',
-      name: 'St Vincent De Paul Society', 
+      name: 'B)	Parish Finance Committee', 
       description: 'Serving the needy and marginalized' 
     },
     { 
       id: 'legion-of-mary',
-      name: 'Legion of Mary', 
+      name: '1)	St. Joseph the worker', 
       description: 'Dedicated to spiritual growth and evangelization' 
     },
     { 
       id: 'parish-choir',
-      name: 'Parish Choir', 
+      name: '2)	Catholic Association Bhatkal Unite.', 
       description: 'Enhancing liturgical celebrations through music' 
     },
     { 
       id: 'catholic-womens-association',
-      name: 'Catholic Women\'s Association', 
+      name: '3)	Women’s League.', 
       description: 'Empowering women through spiritual and social activities' 
     },
     { 
       id: 'altar-servers',
-      name: 'Altar Servers Association', 
+      name: '4)	St. Vincent the Paul Society.', 
       description: 'Training and coordinating altar servers' 
-    }
+    },
+    { 
+      id: 'Assisi-Youth',
+      name: '5)	Assisi Youth Club.', 
+      description: 'Training and coordinating altar servers' 
+    },
+    { 
+      id: 'Children-Club.',
+      name: '6)	Children Club.', 
+      description: 'Training and coordinating altar servers' 
+    },
+     { 
+      id: 'Altar-Servers',
+      name: '7)	Altar Servers.', 
+      description: 'Training and coordinating altar servers' 
+    },
+     { 
+      id: 'choir',
+      name: '8) Choir', 
+      description: 'Training and coordinating altar servers' 
+    },
   ];
 
   const priests = [
@@ -114,12 +135,12 @@ const MassTimings = () => {
               <CardHeader className="bg-primary/5">
                 <CardTitle className="flex items-center gap-2 font-playfair text-2xl text-primary">
                   <Clock className="text-gold" />
-                  General Mass Timings
+                  Week Days Mass Timings
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="space-y-4">
-                  {massSchedule.general.map((schedule, index) => (
+                  {massSchedule.WeekdaysMasses.map((schedule, index) => (
                     <div key={index} className="flex items-center p-3 bg-ivory rounded-lg hover:bg-gold/5 transition-colors">
                       <Calendar className="text-gold mr-3 h-5 w-5 flex-shrink-0" />
                       <div>
@@ -146,10 +167,10 @@ const MassTimings = () => {
                   <div className="bg-ivory p-4 rounded-lg hover:bg-gold/5 transition-colors">
                     <h3 className="font-semibold text-lg mb-3 text-primary flex items-center">
                       <Users className="text-gold mr-2 h-5 w-5" />
-                      Boys Mass
+                      Novena
                     </h3>
                     <ul className="space-y-2">
-                      {massSchedule.boys.map((schedule, index) => (
+                      {massSchedule.Novena.map((schedule, index) => (
                         <li key={index} className="font-opensans text-soft-gray flex items-center">
                           <Calendar className="text-gold mr-2 h-4 w-4 flex-shrink-0" />
                           <span>{schedule.day}: {schedule.time}</span>
@@ -162,10 +183,10 @@ const MassTimings = () => {
                   <div className="bg-ivory p-4 rounded-lg hover:bg-gold/5 transition-colors">
                     <h3 className="font-semibold text-lg mb-3 text-primary flex items-center">
                       <Users className="text-gold mr-2 h-5 w-5" />
-                      Girls Mass
+                      Holy Mass Adoration
                     </h3>
                     <ul className="space-y-2">
-                      {massSchedule.girls.map((schedule, index) => (
+                      {massSchedule.Holy_Mass_Adoration.map((schedule, index) => (
                         <li key={index} className="font-opensans text-soft-gray flex items-center">
                           <Calendar className="text-gold mr-2 h-4 w-4 flex-shrink-0" />
                           <span>{schedule.day}: {schedule.time}</span>
@@ -178,10 +199,25 @@ const MassTimings = () => {
                   <div className="bg-ivory p-4 rounded-lg hover:bg-gold/5 transition-colors md:col-span-2">
                     <h3 className="font-semibold text-lg mb-3 text-primary flex items-center">
                       <Users className="text-gold mr-2 h-5 w-5" />
-                      Seniors Mass
+                      Sunday Holy Mass
                     </h3>
                     <ul className="space-y-2">
-                      {massSchedule.seniors.map((schedule, index) => (
+                      {massSchedule.Sunday_Holy_Mass.map((schedule, index) => (
+                        <li key={index} className="font-opensans text-soft-gray flex items-center">
+                          <Calendar className="text-gold mr-2 h-4 w-4 flex-shrink-0" />
+                          <span>{schedule.day}: {schedule.time}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Seniors Mass */}
+                  <div className="bg-ivory p-4 rounded-lg hover:bg-gold/5 transition-colors md:col-span-2">
+                    <h3 className="font-semibold text-lg mb-3 text-primary flex items-center">
+                      <Users className="text-gold mr-2 h-5 w-5" />
+                      Special English Mass
+                    </h3>
+                    <ul className="space-y-2">
+                      {massSchedule.SpecialEnglishMass.map((schedule, index) => (
                         <li key={index} className="font-opensans text-soft-gray flex items-center">
                           <Calendar className="text-gold mr-2 h-4 w-4 flex-shrink-0" />
                           <span>{schedule.day}: {schedule.time}</span>
