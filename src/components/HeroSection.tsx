@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center min-h-screen bg-black text-white overflow-hidden"
+      className="relative flex items-start justify-center min-h-screen bg-black text-white overflow-hidden"
       style={{ marginTop: '-64px' }}
     >
       {/* Background image with overlay */}
@@ -17,7 +17,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          style={{ filter: 'brightness(0.5)' }}
+          style={{ filter: 'brightness(1)' }}
           aria-label="Church interior background video"
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -31,30 +31,19 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-playfair text-2xl md:text-3xl text-pastel-gold mb-4"
+            className="font-playfair text-2xl md:text-5xl text-pastel-gold mb-4 top-0"
           >
-            Our Lady of Lourdes Church
-          </motion.h2>
-          <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-            You Belong Here
-          </h1>
-          <p className="font-opensans text-lg md:text-xl mb-10 text-gray-100 max-w-xl mx-auto leading-relaxed">
-            Join us as we gather to worship, grow, and serve together in community.
-          </p>
-          <Button
-            className="bg-pastel-gold text-gray-900 hover:bg-amber-300 transition-all duration-300 text-lg py-6 px-8 rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 mx-auto"
-            aria-label="Plan your visit to Grace Church"
-          >
-            Plan Your Visit <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-          </Button>
+            Our Lady of Lourdes Church Bhatkal
+          </motion.h1>
+          
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -62,7 +51,7 @@ const HeroSection = () => {
           >
             <p className="text-gray-200 mb-2 text-lg">Join us this Sunday</p>
             <p className="text-2xl font-semibold">10:00 AM &amp; 6:00 PM</p>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>
