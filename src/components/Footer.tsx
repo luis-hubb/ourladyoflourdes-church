@@ -42,8 +42,8 @@ const Footer = () => {
             <div className="flex items-start space-x-3 mb-4">
               <MapPin size={20} className="text-pastel-gold mt-1 shrink-0" />
               <p className="font-opensans text-gray-300">
-                123 Church Street<br />
-                City, State 12345
+                Our Lady of Lourdes Church Mundalli,<br />
+                Bhatkal - 581320 Uttar Kannada District
               </p>
             </div>
             <p className="font-opensans text-sm text-gray-400">
@@ -93,8 +93,8 @@ const Footer = () => {
           >
             <h3 className="font-playfair text-xl font-bold mb-6">Contact Us</h3>
             <div className="space-y-2 font-opensans">
-              <p>info@ourladyoflourdes.org</p>
-              <p>(123) 456-7890</p>
+              <p>premofm@gmail.com</p>
+              <p>+91 9482420590</p>
             </div>
             <div className="mt-6">
               <a 
