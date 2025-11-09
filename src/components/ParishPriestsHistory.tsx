@@ -20,6 +20,8 @@ const parishPriests = [
   { no: 16, name: "Fr. Nicholas D'Souza OFM", period: "Dec. 2016 – July 2020" },
   { no: 17, name: "Fr. Cajetan Lourenco OFM", period: "July 2020 – May 2021" },
   { no: 18, name: "Fr. Prem Kumar D'Souza OFM", period: "May 2021 – Present" },
+  { no: 19, name: "Fr. Dharma L. Bernard OFM", period: "Dec 2023 – Present" },
+
 ];
 
 const ParishPriestsHistory = () => {
