@@ -93,7 +93,7 @@ const SpiritualHeritageSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-pastel-gold to-blue-300 rounded-2xl transform rotate-3"></div>
                 <div className="relative bg-white rounded-2xl p-6 shadow-xl">
                   <img 
-                    src="/images/mother_marry.jpg" 
+                    src="/images/OurLadyofLourdes.jpg" 
                     alt="Our Lady of Lourdes"
                     className="w-full max-h-96 object-contain rounded-xl shadow-lg bg-gray-50"
                   />
