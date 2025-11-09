@@ -8,7 +8,7 @@ const MassTimings = () => {
   const massSchedule = {
     WeekdaysMasses: [
       { day: 'Monday', time: '06:45am (Konkani)' },
-      { day: 'Wednessday', time: '06:45am (Konkani)' },
+      { day: 'Wednesday', time: '06:45am (Konkani)' },
       { day: 'Thursday', time: '06:45am (Konkani)' },
       { day: 'Saturday', time: '06:45am (Konkani)' },
 
