@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Church } from 'lucide-react';
+import ParishPriestsHistory from './ParishPriestsHistory';
 
 const HistorySection = () => {
   return (
@@ -31,17 +32,17 @@ const HistorySection = () => {
               <p className="text-gray-700 mb-6">
                 As the oral tradition goes there was a small Chapel dedicated to Our Lady of Lourdes, on the very spot of the present Church of Mundalli since about 85 years. Manki being the Parish Church, Murdeshwar and Bhatkal were its sub-stations. Gradually two more sub-stations, Ternamakki and Shirali, were added to Manki Mission unit.
               </p>
-              
+
               <p className="text-gray-700 mb-6">
                 In 1974, the Bhatkal mission was offered to the Franciscans. The present Parish Church was built and raised to the status of a Parish in 1983. On 23rd March 1989, Bhatkal was given to the Franciscans "in perpetuum" and the Bhatkal Parish is now under the care of the Franciscan Order of St. Thomas Province in India.
               </p>
-              
+
               <p className="text-gray-700">
                 The Church has its own cemetery behind the Church building on the hill slope. There is also St. Joseph's Church at Muglihonda, built in 1986, which serves as a sub-station Chapel of Our Lady of Lourdes Church, Mundalli.
               </p>
             </div>
           </div>
-          
+
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -54,7 +55,7 @@ const HistorySection = () => {
               <p className="text-3xl font-bold text-pastel-gold">1983</p>
               <p className="text-gray-600 mt-2">Year the present Parish Church was built</p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -77,8 +78,8 @@ const HistorySection = () => {
           >
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
-                <img 
-                  src="/images/Br. Xavier Durairaj (Minister Provincial).jpg" 
+                <img
+                  src="/images/Br-Xavier-Durairaj.png"
                   alt="Br. Xavier Durairaj - Minister Provincial"
                   className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
                 />
@@ -91,13 +92,15 @@ const HistorySection = () => {
                   Br. Xavier Durairaj - Minister Provincial
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Under the guidance of our Minister Provincial and the Franciscan Order of St. Thomas Province, 
-                  our parish continues to serve the community with the spirit of St. Francis - embracing simplicity, 
+                  Under the guidance of our Minister Provincial and the Franciscan Order of St. Thomas Province,
+                  our parish continues to serve the community with the spirit of St. Francis - embracing simplicity,
                   caring for the poor, and fostering a deep love for all of God's creation.
                 </p>
               </div>
             </div>
           </motion.div>
+
+          <ParishPriestsHistory />
         </motion.div>
       </div>
     </section>

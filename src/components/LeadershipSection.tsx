@@ -19,7 +19,7 @@ const leadership = [
   {
     name: "Br. Xavier Durairaj",
     role: "Minister Provincial",
-    image: "/images/Br. Xavier Durairaj (Minister Provincial).jpg",
+    image: "/images/Br-Xavier-Durairaj.png",
     bio: "Providing spiritual guidance and leadership to our Franciscan community.",
     email: "provincial@church.org",
   },
