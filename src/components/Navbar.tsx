@@ -11,6 +11,12 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Always show navbar on non-home pages
+    if (location.pathname !== '/') {
+      setVisible(true);
+      return;
+    }
+
     const handleScroll = () => {
       // Show navbar after scrolling past hero section (approximately 100px)
       const isVisible = window.scrollY > 100;
@@ -27,7 +33,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled, visible]);
+  }, [scrolled, visible, location.pathname]);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -35,7 +41,7 @@ const Navbar = () => {
     { name: 'Masses', href: '#masses-timing' },
     { name: 'Events', href: '#events' },
     { name: 'Associations', href: '#associations' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
