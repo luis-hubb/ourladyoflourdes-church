@@ -75,7 +75,10 @@ const HistorySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
             className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8"
-          ><div className="flex flex-col md:flex-row items-center gap-8">
+          ><div className='flex flex-col gap-8'>
+
+          
+            <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img
                   src="/images/Br_Massimo_Fusarelli.jpeg"
@@ -117,7 +120,7 @@ const HistorySection = () => {
                 </p>
               </div>
             </div>
-             
+             </div>
           </motion.div>
 
           <ParishPriestsHistory />
