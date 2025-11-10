@@ -75,7 +75,26 @@ const HistorySection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
             className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8"
-          >
+          ><div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/Br_Massimo_Fusarelli.jpeg"
+                  alt="Br. Massimo Fusarelli"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+              <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
+                
+                </h3>
+                <p className="text-lg font-semibold text-pastel-gold mb-3">
+                  Br. Massimo Fusarelli - Minister General
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                 Born in Rome on March 30, 1963, he received the Franciscan habit on July 28, 1982, and professed first vows on July 30, 1983. He professed solemn vows on January 8, 1989, and was ordained a priest on September 30, 1989. After theology studies, he obtained a Licentiate in Patristic Studies. He was elected Provincial Minister of the Province St. Bonaventure on July 2, 2020. Br. Massimo was elected as the 121st successor of St Francis. May the Holy Spirit guard and guide him.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img
@@ -85,9 +104,9 @@ const HistorySection = () => {
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
+                {/* <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
                   Franciscan Leadership
-                </h3>
+                </h3> */}
                 <p className="text-lg font-semibold text-pastel-gold mb-3">
                   Br. Xavier Durairaj - Minister Provincial
                 </p>
@@ -98,6 +117,7 @@ const HistorySection = () => {
                 </p>
               </div>
             </div>
+             
           </motion.div>
 
           <ParishPriestsHistory />
