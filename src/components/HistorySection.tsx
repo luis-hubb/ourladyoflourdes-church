@@ -1,0 +1,209 @@
+import { motion } from 'framer-motion';
+import { Church } from 'lucide-react';
+import ParishPriestsHistory from './ParishPriestsHistory';
+
+const HistorySection = () => {
+  return (
+    <section id="our-history" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center mb-12"
+        >
+          <div className="flex justify-center mb-6">
+            <Church className="h-12 w-12 text-pastel-gold" />
+          </div>
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our History</h2>
+          <div className="w-24 h-1 bg-pastel-gold mx-auto mb-8"></div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto"
+        >
+          <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-gray-700 mb-6">
+                As the oral tradition goes there was a small Chapel dedicated to Our Lady of Lourdes, on the very spot of the present Church of Mundalli since about 85 years. Manki being the Parish Church, Murdeshwar and Bhatkal were its sub-stations. Gradually two more sub-stations, Ternamakki and Shirali, were added to Manki Mission unit.
+              </p>
+
+              <p className="text-gray-700 mb-6">
+                In 1974, the Bhatkal mission was offered to the Franciscans. The present Parish Church was built and raised to the status of a Parish in 1983. On 23rd March 1989, Bhatkal was given to the Franciscans "in perpetuum" and the Bhatkal Parish is now under the care of the Franciscan Order of St. Thomas Province in India.
+              </p>
+
+              <p className="text-gray-700">
+                The Church has its own cemetery behind the Church building on the hill slope. There is also St. Joseph's Church at Muglihonda, built in 1986, which serves as a sub-station Chapel of Our Lady of Lourdes Church, Mundalli.
+              </p>
+            </div>
+          </div>
+
+
+
+
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg shadow-lg p-6 text-center"
+            >
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">Established</h3>
+              <p className="text-3xl font-bold text-pastel-gold">1983</p>
+              <p className="text-gray-600 mt-2">Year the present Parish Church was built</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg shadow-lg p-6 text-center"
+            >
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">Franciscan Care</h3>
+              <p className="text-3xl font-bold text-pastel-gold">1989</p>
+              <p className="text-gray-600 mt-2">Year Bhatkal was given to the Franciscans "in perpetuum"</p>
+            </motion.div>
+          </div>
+
+          {/* Our Parish Priests - 3 Card Layout */}
+          <div className="mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              {/* <h3 className="font-playfair text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                Our Parish Priests
+              </h3> */}
+              {/* <div className="w-20 h-1 bg-pastel-gold mx-auto"></div> */}
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  name: "Pope Leo XIV",
+                  image: "/images/Leo PP XIV.png",
+                },
+                {
+                  name: "Dr. Peter Machado",
+                  role: "Archbishop of Karnataka",
+                  image: "/images/dr.peter.machado.jpeg",
+                },
+                {
+                  name: "Rev. Dr. Duming Dias",
+                  role: "Bishop of Karwar",
+                  image: "/images/Rev. Dr-duming-dias.jpeg",
+                },
+
+              ].map((priest, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                    <div className="flex flex-col items-center text-center">
+                      {/* Image */}
+                      <div className="relative mb-4">
+                        <div className="absolute inset-0 bg-gradient-to-br from-pastel-gold/30 to-amber-400/30 rounded-full blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                        <img
+                          src={priest.image}
+                          alt={priest.name}
+                          className="relative w-24 h-24 rounded-full object-cover border-4 border-pastel-gold shadow-lg group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.src = 'https://via.placeholder.com/96?text=' + priest.name.split(' ').map(n => n[0]).join('');
+                          }}
+                        />
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-6 text-center">
+                        <h3 className="font-playfair text-xl font-bold mb-1 text-gray-900 whitespace-nowrap">
+                          {priest.name}
+                        </h3>
+                        <p className="text-base font-semibold text-pastel-gold whitespace-nowrap">
+                          {priest.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8"
+          ><div className='flex flex-col gap-8'>
+
+
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/images/Br_Massimo_Fusarelli.jpeg"
+                    alt="Br. Massimo Fusarelli"
+                    className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
+
+                  </h3>
+                  <p className="text-lg font-semibold text-pastel-gold mb-3">
+                    Br. Massimo Fusarelli - Minister General
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Born in Rome on March 30, 1963, he received the Franciscan habit on July 28, 1982, and professed first vows on July 30, 1983. He professed solemn vows on January 8, 1989, and was ordained a priest on September 30, 1989. After theology studies, he obtained a Licentiate in Patristic Studies. He was elected Provincial Minister of the Province St. Bonaventure on July 2, 2020. Br. Massimo was elected as the 121st successor of St Francis. May the Holy Spirit guard and guide him.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <img
+                    src="/images/Br-Xavier-Durairaj.png"
+                    alt="Br. Xavier Durairaj - Minister Provincial"
+                    className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  {/* <h3 className="font-playfair text-2xl font-bold mb-2 text-gray-900">
+                  Franciscan Leadership
+                </h3> */}
+                  <p className="text-lg font-semibold text-pastel-gold mb-3">
+                    Br. Xavier Durairaj - Minister Provincial
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Under the guidance of our Minister Provincial and the Franciscan Order of St. Thomas Province,
+                    our parish continues to serve the community with the spirit of St. Francis - embracing simplicity,
+                    caring for the poor, and fostering a deep love for all of God's creation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <ParishPriestsHistory />
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HistorySection; 
