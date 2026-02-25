@@ -21,7 +21,7 @@ const MassTimings = () => {
       { day: 'Friday', time: '06:00pm (Konkani)' },
     ],
     Sunday_Holy_Mass: [
-      { day: 'Sunday', time: '07:00am (Catechism)' },
+      { day: 'Sunday', time: '07:30am (Catechism)' },
       { day: 'Sunday', time: '08:30am (Konkani)' },
     ],
      SpecialEnglishMass: [

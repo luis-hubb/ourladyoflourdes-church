@@ -86,8 +86,8 @@ const Navbar = () => {
     >
       <nav
         className={`mt-4 mx-4 max-w-7xl w-full rounded-lg ${scrolled
-            ? 'bg-white/90 shadow-lg backdrop-blur-md'
-            : 'bg-white/80 shadow-md backdrop-blur-sm'
+          ? 'bg-white/90 shadow-lg backdrop-blur-md'
+          : 'bg-white/80 shadow-md backdrop-blur-sm'
           } transition-all duration-300`}
         role="navigation"
         aria-label="Main navigation"
@@ -102,7 +102,7 @@ const Navbar = () => {
                 aria-label="Our Lady of Lourdes Church Home"
               >
                 <span className="font-playfair text-2xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent group-hover:from-pastel-gold group-hover:via-amber-600 group-hover:to-pastel-gold transition-all duration-500">
-                  Our Lady of Lourdes
+                  Our Lady of Lourdes <span className="hidden md:inline">Church Bhatkal</span>
                 </span>
               </Link>
             </div>
@@ -115,8 +115,8 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${isActive(item.href)
-                        ? 'text-pastel-gold bg-pastel-gold/10'
-                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
+                      ? 'text-pastel-gold bg-pastel-gold/10'
+                      : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
                       }`}
                     onClick={(e) => {
                       e.preventDefault();
@@ -130,8 +130,8 @@ const Navbar = () => {
                     key={item.name}
                     to={item.href}
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${isActive(item.href)
-                        ? 'text-pastel-gold bg-pastel-gold/10'
-                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
+                      ? 'text-pastel-gold bg-pastel-gold/10'
+                      : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-100/50'
                       }`}
                     onClick={() => handleClick(item.href)}
                   >
@@ -188,8 +188,8 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className={`block px-5 py-4 rounded-md text-base font-medium transition-all duration-300 ${isActive(item.href)
-                          ? 'text-pastel-gold bg-pastel-gold/10'
-                          : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
+                        ? 'text-pastel-gold bg-pastel-gold/10'
+                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
                         }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -204,8 +204,8 @@ const Navbar = () => {
                       key={item.name}
                       to={item.href}
                       className={`block px-5 py-4 rounded-md text-base font-medium transition-all duration-300 ${isActive(item.href)
-                          ? 'text-pastel-gold bg-pastel-gold/10'
-                          : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
+                        ? 'text-pastel-gold bg-pastel-gold/10'
+                        : 'text-gray-700 hover:text-pastel-gold hover:bg-gray-50'
                         }`}
                       onClick={() => handleClick(item.href)}
                       role="menuitem"

@@ -14,7 +14,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="mb-8 md:mb-0"
           >
-            <h3 className="font-playfair text-xl font-bold mb-6">Our Lady of Lourdes Church</h3>
+            <h3 className="font-playfair text-xl font-bold mb-6">Our Lady of Lourdes Church Bhatkal</h3>
             <p className="font-opensans text-gray-300 mb-4">
               A welcoming Catholic community dedicated to serving God and our neighbors through faith, hope, and love.
             </p>
@@ -64,21 +64,21 @@ const Footer = () => {
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
                   <p className="font-opensans text-gray-300">Sunday Mass</p>
-                  <p className="font-opensans text-sm text-gray-400">8:00 AM, 10:00 AM, 12:00 PM</p>
+                  <p className="font-opensans text-sm text-gray-400">8:30 AM - 10:00 AM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
                   <p className="font-opensans text-gray-300">Weekday Mass</p>
-                  <p className="font-opensans text-sm text-gray-400">9:00 AM</p>
+                  <p className="font-opensans text-sm text-gray-400">6:45 AM - 7:30 AM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
-                  <p className="font-opensans text-gray-300">Saturday Mass</p>
-                  <p className="font-opensans text-sm text-gray-400">5:00 PM (Vigil)</p>
+                  <p className="font-opensans text-gray-300">Sunday</p>
+                  <p className="font-opensans text-sm text-gray-400"> 7:30 AM - 8:15 AM (Catechism Class)</p>
                 </div>
               </div>
             </div>
