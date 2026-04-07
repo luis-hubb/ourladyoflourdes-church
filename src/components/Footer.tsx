@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="#" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pastel-gold transition-colors">
+              <a href="https://www.youtube.com/@ourladyoflourdeschurchmund957" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Youtube size={20} />
               </a>
             </div>
