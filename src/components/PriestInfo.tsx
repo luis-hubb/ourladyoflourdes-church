@@ -30,7 +30,7 @@ const PriestCard = ({ name, role, photoUrl, email, phone }: PriestCardProps) => 
         />
       </div>
       <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gold text-white px-4 py-1 rounded-full text-xs font-semibold shadow-md">
-        {role.includes("Parish Priest") ? "Parish Priest" : "Assistant Priest"}
+        {role.includes("Parish Priest") ? "Parish Priest" : "Assisting Priest"}
       </div>
     </div>
     
@@ -76,7 +76,7 @@ const PriestInfo = () => {
           />
           <PriestCard
             name="Rev. Fr. Dharma Bernard"
-            role="Assistant parish priest (OFM), Mundolli, Bhatkal"
+            role="Assisting parish priest (OFM), Mundolli, Bhatkal"
             photoUrl="/images/dharma_bernard.jpg"
             email="assistant.priest@church.org"
             phone="+91 9876543210"

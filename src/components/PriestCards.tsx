@@ -10,7 +10,7 @@ const priests = [
     },
     {
         name: "Rev. Fr. Dharma Bernard",
-        role: "Assistant Parish Priest",
+        role: "Assisting Parish Priest",
         image: "/images/dharma_bernard.jpg",
         bio: "Supporting our parish community with dedication and unwavering faith.",
     },
