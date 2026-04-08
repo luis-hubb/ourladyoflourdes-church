@@ -19,7 +19,7 @@ const Footer = () => {
               A welcoming Catholic community dedicated to serving God and our neighbors through faith, hope, and love.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-300 hover:text-pastel-gold transition-colors">
+              <a href="https://www.facebook.com/groups/273672643733371/?ref=share&mibextid=NSMWBT" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-pastel-gold transition-colors">
