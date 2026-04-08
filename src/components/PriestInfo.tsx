@@ -35,7 +35,7 @@ const PriestCard = ({ name, role, photoUrl, email, phone }: PriestCardProps) => 
     </div>
     
     <div className="text-center mt-4">
-      <h3 className="font-playfair font-semibold text-2xl text-primary">{name}</h3>
+      <h3 className="font-playfair font-semibold text-2xl text-primary whitespace-nowrap">{name}</h3>
       <p className="text-soft-gray text-sm mt-1 max-w-xs">{role}</p>
       
       {(email || phone) && (
@@ -68,14 +68,14 @@ const PriestInfo = () => {
       <CardContent className="pt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <PriestCard
-            name="Rev. Fr. Prem Kumar D'souza"
+            name="Rev. Fr. Premkumar D'souza OFM"
             role="Parish Priest Of Our Lady of Lourdes Friary (OFM) Mundalli"
             photoUrl="/images/prem_kumar.jpg"
             email="parish.priest@church.org"
             phone="+91 1234567890"
           />
           <PriestCard
-            name="Rev. Fr. Dharma Bernard"
+            name="Rev. Fr. Dharma Bernard OFM"
             role="Assisting parish priest (OFM), Mundolli, Bhatkal"
             photoUrl="/images/dharma_bernard.jpg"
             email="assistant.priest@church.org"
