@@ -56,7 +56,7 @@ const SpiritualHeritageSection = () => {
               Our Spiritual Heritage
             </h2>
             <div className="w-24 h-1 bg-pastel-gold mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-justify">
               Rooted in the Franciscan tradition and devoted to Our Lady of Lourdes, 
               our parish carries forward centuries of faith, hope, and love.
             </p>
@@ -68,18 +68,18 @@ const SpiritualHeritageSection = () => {
                 <h3 className="font-playfair text-3xl font-bold mb-6 text-gray-900">
                   Our Lady of Lourdes
                 </h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-6 leading-relaxed text-justify">
                   Our parish is dedicated to Our Lady of Lourdes, honoring the apparitions 
                   of the Blessed Virgin Mary to Saint Bernadette in 1858. Mary's message 
                   of prayer, penance, and pilgrimage continues to guide our community today.
                 </p>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-700 mb-6 leading-relaxed text-justify">
                   As a Franciscan parish, we follow in the footsteps of Saint Francis of Assisi, 
                   embracing simplicity, service to the poor, and care for all of God's creation.
                 </p>
                 <div className="bg-blue-50 rounded-lg p-6">
                   <h4 className="font-semibold text-lg mb-3 text-gray-900">Our Mission</h4>
-                  <p className="text-gray-700 italic">
+                  <p className="text-gray-700 italic text-justify">
                     "To be a welcoming community that proclaims the Gospel through worship, 
                     service, and fellowship, following the example of Our Lady of Lourdes 
                     and the Franciscan spirit."
@@ -121,21 +121,21 @@ const SpiritualHeritageSection = () => {
                     <span className="text-2xl">🙏</span>
                   </div>
                   <h4 className="font-semibold text-lg mb-2">Prayer</h4>
-                  <p className="text-gray-600">Deepening our relationship with God through contemplation and worship</p>
+                  <p className="text-gray-600 text-justify">Deepening our relationship with God through contemplation and worship</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-pastel-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">❤️</span>
                   </div>
                   <h4 className="font-semibold text-lg mb-2">Service</h4>
-                  <p className="text-gray-600">Serving the poor and marginalized with compassion and dignity</p>
+                  <p className="text-gray-600 text-justify">Serving the poor and marginalized with compassion and dignity</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-pastel-gold rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🌱</span>
                   </div>
                   <h4 className="font-semibold text-lg mb-2">Creation</h4>
-                  <p className="text-gray-600">Caring for our common home and all of God's creatures</p>
+                  <p className="text-gray-600 text-justify">Caring for our common home and all of God's creatures</p>
                 </div>
               </div>
             </div>

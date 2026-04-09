@@ -22,7 +22,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/groups/273672643733371/?ref=share&mibextid=NSMWBT" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pastel-gold transition-colors">
+              <a href="https://www.instagram.com/our_lady_of_lourdes_official?igsh=MTBkaDI3NWpvYXRpeA%3D%3D" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="https://www.youtube.com/@ourladyoflourdeschurchmund957" className="text-gray-300 hover:text-pastel-gold transition-colors">
