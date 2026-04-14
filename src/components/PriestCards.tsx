@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 
 const priests = [
     {
-        name: "Rev. Fr. Prem Kumar D'souza",
+        name: "Rev. Fr. Premkumar D'souza OFM",
         role: "Parish Priest",
         image: "/images/prem_kumar.jpg",
         bio: "Leading our parish with wisdom and compassion, serving the faithful with love.",
@@ -55,7 +55,7 @@ const PriestCards = () => {
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
                                 <div className="flex flex-col items-center text-center">
                                     {/* Image */}
                                     <div className="relative mb-4">
@@ -71,7 +71,7 @@ const PriestCards = () => {
                                     </div>
 
                                     {/* Content */}
-                                    <h3 className="font-playfair text-xl font-bold mb-1 text-gray-900">
+                                    <h3 className="font-playfair text-sm sm:text-base md:text-xl font-bold mb-1 text-gray-900 break-words w-full">
                                         {priest.name}
                                     </h3>
                                     <p className="text-base font-semibold text-pastel-gold mb-3">

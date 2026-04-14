@@ -11,15 +11,15 @@ interface PriestCardProps {
 }
 
 const PriestCard = ({ name, role, photoUrl, email, phone }: PriestCardProps) => (
-  <motion.div 
+  <motion.div
     className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
     whileHover={{ y: -5 }}
     transition={{ type: 'spring', stiffness: 300 }}
   >
     <div className="relative mb-4">
       <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold shadow-lg">
-        <img 
-          src={photoUrl} 
+        <img
+          src={photoUrl}
           alt={name}
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -33,11 +33,11 @@ const PriestCard = ({ name, role, photoUrl, email, phone }: PriestCardProps) => 
         {role.includes("Parish Priest") ? "Parish Priest" : "Assisting Priest"}
       </div>
     </div>
-    
-    <div className="text-center mt-4">
-      <h3 className="font-playfair font-semibold text-2xl text-primary whitespace-nowrap">{name}</h3>
-      <p className="text-soft-gray text-sm mt-1 max-w-xs">{role}</p>
-      
+
+    <div className="text-center mt-4 w-full px-2">
+      <h3 className="font-playfair font-semibold text-base sm:text-lg md:text-2xl text-primary break-words whitespace-normal leading-tight hyphens-auto w-full px-1">{name}</h3>
+      <p className="text-soft-gray text-xs md:text-sm mt-2 max-w-xs mx-auto leading-relaxed">{role}</p>
+
       {(email || phone) && (
         <div className="mt-4 flex justify-center space-x-4">
           {email && (

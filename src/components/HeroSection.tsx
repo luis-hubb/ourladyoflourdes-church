@@ -26,7 +26,7 @@ const HeroSection = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="absolute top-20 right-6 z-30 flex flex-row space-x-2 space-y-0">
+      <div className="absolute top-24 md:top-20 right-4 md:right-6 z-30 flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-2 mt-4 md:mt-0">
         <motion.a
           href="https://www.facebook.com/groups/273672643733371/?ref=share&mibextid=NSMWBT"
           target="_blank"

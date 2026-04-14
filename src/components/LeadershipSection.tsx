@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const leadership = [
   {
-    name: "Rev. Fr. Prem Kumar D'souza",
+    name: "Rev. Fr. Premkumar D'souza OFM",
     role: "Parish Priest",
     image: "/images/prem_kumar.jpg",
     bio: "Leading our parish with wisdom and compassion, serving the community of Our Lady of Lourdes.",
@@ -53,7 +53,7 @@ const LeadershipSection = () => {
                     <AvatarImage src={leader.image} alt={leader.name} />
                     <AvatarFallback>{leader.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
-                  <h3 className="font-semibold text-xl mb-1">{leader.name}</h3>
+                  <h3 className="font-semibold text-sm sm:text-base md:text-xl mb-1 break-words w-full">{leader.name}</h3>
                   <p className="text-primary font-medium mb-2">{leader.role}</p>
                   <p className="text-gray-600 mb-4">{leader.bio}</p>
                   <a
