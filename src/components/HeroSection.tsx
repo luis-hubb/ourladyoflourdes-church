@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Facebook, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -23,6 +23,46 @@ const HeroSection = () => {
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      </div>
+
+      {/* Social Media Icons */}
+      <div className="absolute top-20 right-6 z-30 flex flex-row space-x-2 space-y-0">
+        <motion.a
+          href="https://www.facebook.com/groups/273672643733371/?ref=share&mibextid=NSMWBT"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="bg-white/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors duration-300 border border-white/50 shadow-lg"
+          aria-label="Facebook"
+        >
+          <Facebook className="w-4 h-4 text-white" />
+        </motion.a>
+        <motion.a
+          href="https://www.instagram.com/our_lady_of_lourdes_official?igsh=MTBkaDI3NWpvYXRpeA%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="bg-white/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors duration-300 border border-white/50 shadow-lg"
+          aria-label="Instagram"
+        >
+          <Instagram className="w-4 h-4 text-white" />
+        </motion.a>
+        <motion.a
+          href="https://www.youtube.com/@ourladyoflourdeschurchmund957"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="bg-white/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors duration-300 border border-white/50 shadow-lg"
+          aria-label="YouTube"
+        >
+          <Youtube className="w-4 h-4 text-white" />
+        </motion.a>
       </div>
 
       {/* Content */}
