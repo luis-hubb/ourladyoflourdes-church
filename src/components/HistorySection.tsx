@@ -47,7 +47,7 @@ const HistorySection = () => {
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
               {mainHistory.map((para, index) => (
-                <p key={index} className="text-gray-700 leading-relaxed mb-6">
+                <p key={index} className="text-gray-700 leading-relaxed mb-6 text-justify">
                   {para}
                 </p>
               ))}
@@ -62,7 +62,7 @@ const HistorySection = () => {
                     className="overflow-hidden"
                   >
                     {additionalHistory.map((para, index) => (
-                      <p key={index} className={`text-gray-700 leading-relaxed mb-6 ${para.includes(':') || para === "St. Joseph chapel" ? "font-bold text-xl mt-8" : ""}`}>
+                      <p key={index} className={`text-gray-700 leading-relaxed mb-6 text-justify ${para.includes(':') || para === "St. Joseph chapel" ? "font-bold text-xl mt-8" : ""}`}>
                         {para}
                       </p>
                     ))}
@@ -215,7 +215,7 @@ const HistorySection = () => {
                   <p className="text-lg font-semibold text-pastel-gold mb-3">
                     Br. Massimo Fusarelli - Minister General
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-justify">
                     Born in Rome on March 30, 1963, he received the Franciscan habit on July 28, 1982, and professed first vows on July 30, 1983. He professed solemn vows on January 8, 1989, and was ordained a priest on September 30, 1989. After theology studies, he obtained a Licentiate in Patristic Studies. He was elected Provincial Minister of the Province St. Bonaventure on July 2, 2020. Br. Massimo was elected as the 121st successor of St Francis. May the Holy Spirit guard and guide him.
                   </p>
                 </div>
@@ -235,7 +235,7 @@ const HistorySection = () => {
                   <p className="text-lg font-semibold text-pastel-gold mb-3">
                     Br. Xavier Durairaj - Minister Provincial
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed text-justify">
                     Under the guidance of our Minister Provincial and the Franciscan Order of St. Thomas Province,
                     our parish continues to serve the community with the spirit of St. Francis - embracing simplicity,
                     caring for the poor, and fostering a deep love for all of God's creation.
