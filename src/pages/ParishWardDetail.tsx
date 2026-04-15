@@ -143,8 +143,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward6',
     name: 'St. Clare Ward',
-    mainImage: '/images/ward6-main.jpg',
-    images: ['/images/ward6-1.jpg', '/images/ward6-2.jpg', '/images/ward6-3.jpg'],
+    mainImage: '/images/st-clar.jpg',
+    images: ['/images/st-clar.jpg', '/images/ward6-1.jpg', '/images/ward6-2.jpg', '/images/ward6-3.jpg'],
     description: 'Training and organizing youth to serve at the altar during Mass and other liturgical celebrations. St. Clare Ward prepares the next generation of liturgical ministers and fosters a deep appreciation for the sacred rites.',
     leader: 'Mr. Peter D\'Souza',
     contact: '+91 9876543215',
