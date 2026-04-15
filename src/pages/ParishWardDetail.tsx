@@ -22,8 +22,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward1',
     name: 'Lourdes Ward',
-    mainImage: '/images/ward1-main.jpg',
-    images: ['/images/ward1-1.jpg', '/images/ward1-2.jpg', '/images/ward1-3.jpg'],
+    mainImage: '/images/lourdes-ward.jpg',
+    images: ['/images/lourdes-ward.jpg'],
     description: 'A vibrant youth organization focused on spiritual growth, community service, and leadership development. Lourdes Ward brings together young people to foster their faith journey and develop leadership skills through various activities and outreach programs.',
     leader: 'Mr. John D\'Souza',
     contact: '+91 9876543210',
@@ -95,8 +95,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward4',
     name: 'St. Mother Teresa Ward',
-    mainImage: '/images/ward4-main.jpg',
-    images: ['/images/ward4-1.jpg', '/images/ward4-2.jpg', '/images/ward4-3.jpg'],
+    mainImage: '/images/mother-ward.jpg',
+    images: ['/images/mother-ward.jpg'],
     description: 'Enhancing liturgical celebrations through beautiful music and hymns. St. Mother Teresa Ward brings harmony to our worship services and nurtures musical talents within the parish community.',
     leader: 'Mrs. Rose D\'Souza',
     contact: '+91 9876543213',

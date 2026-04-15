@@ -19,8 +19,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward1',
     name: 'Lourdes Ward',
-    mainImage: '/images/ward1-main.jpg',
-    images: ['/images/ward1-1.jpg', '/images/ward1-2.jpg', '/images/ward1-3.jpg'],
+    mainImage: '/images/lourdes-ward.jpg',
+    images: ['/images/lourdes-ward.jpg'],
     description: 'A vibrant youth organization focused on spiritual growth, community service, and leadership development.',
     leader: 'Mr. John D\'Souza',
     contact: '+91 9876543210',
@@ -52,8 +52,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward4',
     name: 'St. Mother Teresa Ward',
-    mainImage: '/images/ward4-main.jpg',
-    images: ['/images/ward4-1.jpg', '/images/ward4-2.jpg', '/images/ward4-3.jpg'],
+    mainImage: '/images/mother-ward.jpg',
+    images: ['/images/mother-ward.jpg'],
     description: 'Enhancing liturgical celebrations through beautiful music and hymns.',
     leader: 'Mrs. Rose D\'Souza',
     contact: '+91 9876543213',
@@ -117,7 +117,7 @@ const ParishWardsSection = () => {
               viewport={{ once: true }}
               className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={ward.mainImage}
                   alt={ward.name}
