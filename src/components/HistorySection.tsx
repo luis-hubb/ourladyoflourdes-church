@@ -17,7 +17,7 @@ const HistorySection = () => {
     "St. Joseph chapel:",
     "Our lady of Lourdes Mundalli, Bhatkal has a sub-station which is called St. Joseph chapel Puravarga. When Fr. Paul Fernandes arrived in Bhatkal in 1974, there was no Chapel to pray for the people of Puravarga. The Friars used to have the Sunday Mass in parishneers houses. Even During the time of Fr. Vincent Pereira (1957-1974), Mass was celebrated in the houses. Sr. Bebiana Noronha, an Ursuline Franciscan Sister used to teach catechism to the children and prepare them for the Mass.",
     "It was the intention of Fr. Paul Fernandes, OFM, to build a Chapel in Puravarga itself, so that the people could pray and celebrate the Eucharist. Fr. Agnel D’Mello OFM who arrived in Bhatkal in January 1976, initiated this process and made a project for the construction of a Chapel in the cemetery that was granted by the Government of Karnataka. Later on, the Franciscan Friars who were working in Bhatkal Taluk, dropped the idea of building a Chapel in the Cemetery due to the distance. Therefore they began to search for a new place for the construction of a Chapel. Fr. Nicholas who became the Parish Priest of Bhatkal in June 1983 played a very major role in buying 10 guntas of land from the Government of Karnataka beside the main road Puravarga (Bhatkal). On 16th December 1985 foundation was laid for the construction of the Chapel by Bishop William D’Mello in the presence of R. N. Naik, MLA, and the faithful of Puravarga. Fr. Lawrence Pereira of the Diocese of Karwar took charge of Bhatkal Parish in June 1986 and completed the construction work of the Chapel in Puravarga. The Chapel was inaugurated and blessed on 19th March 1987 by Late Bishop William D’Mello in the presence of priests, religious and the faithful of Bhatkal. After the Inauguration the Catholics of Puravarga gathered in the Chapel every day in the evenings to pray. Though it bears the name St. Joseph’s Church”, it is only a sub-station (Chapel) of Our Lady of Lourdes Church, Mundalli. It is situated about 4 km to the south from Bhatkal bus stop on the Bhatkal-Mangalore road.",
-    "When the Friars arrived in Bhatkal, there were about 25 families in Puravarga and now it has grown in number as well as in spirituality. The substation, St. Joseph chapel has 95 families and around 300 faithful. The priest resides in the parish and reaches out to the spiritual, moral, economic needs of the faithful. Also serves for the social wellbeing of the people without discrimination."
+    "When the Friars arrived in Bhatkal, there were about 25 families in Puravarga and now it has grown in number as well as in spirituality. The substation, St. Joseph chapel has 95 families and around 300 faithful. The priest resides in the parish and reaches out to the spiritual, moral, economic needs of the faithful. Also serves for the social wellbeing of the people without discrimination.The Silver Jubilee of St. Joseph Chapel was celebrated in the year 2012, marking 25 years of its establishment."
   ];
 
   return (
@@ -102,7 +102,7 @@ const HistorySection = () => {
               className="bg-white rounded-lg shadow-lg p-6 text-center"
             >
               <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">Established</h3>
-              <p className="text-3xl font-bold text-pastel-gold">1983</p>
+              <p className="text-3xl font-bold text-pastel-gold">1957</p>
               <p className="text-gray-600 mt-2">Year the present Parish Church was built</p>
             </motion.div>
 
