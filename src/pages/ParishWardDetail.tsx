@@ -285,7 +285,7 @@ const ParishWardDetail = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-white rounded-lg shadow-lg p-6"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-4 font-playfair">PPC (Parish Pastoral Council)</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4 font-playfair">Parish Pastoral Council Members</h3>
             <div className="space-y-4">
               {ward.ppcMembers.map((member, index) => (
                 <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-md">
