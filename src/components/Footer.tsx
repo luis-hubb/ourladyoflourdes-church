@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Youtube, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { WhatsAppIcon } from './WhatsAppFloating';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Church Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -25,6 +26,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/our_lady_of_lourdes_official?igsh=MTBkaDI3NWpvYXRpeA%3D%3D" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Instagram size={20} />
               </a>
+              <a href="https://wa.me/919845364236" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-pastel-gold transition-colors">
+                <WhatsAppIcon className="w-5 h-5" />
+              </a>
               <a href="https://www.youtube.com/@ourladyoflourdeschurchmund957" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Youtube size={20} />
               </a>
@@ -32,7 +36,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Location */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -52,7 +56,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Service Times */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -85,7 +89,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -97,8 +101,8 @@ const Footer = () => {
               <p>+91 9482420590</p>
             </div>
             <div className="mt-6">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="text-pastel-gold hover:text-amber-400 transition-colors font-opensans font-medium"
               >
                 Send us a message →
@@ -108,8 +112,23 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 mt-16 pt-8 font-opensans text-sm text-gray-500 text-center">
-          <p>© {new Date().getFullYear()} Our Lady of Lourdes Church. All rights reserved.</p>
+        <div className="border-t border-gray-800 mt-16 pt-8 font-opensans text-sm text-gray-500 relative">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
+            <p className="text-center md:text-left">© {new Date().getFullYear()} Our Lady of Lourdes Church. All rights reserved.</p>
+
+            {/* Mobile-only prominent green WhatsApp icon - Aligned to right */}
+            <div className="md:hidden self-end">
+              <a
+                href="https://wa.me/919845364236"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-[#20ba5a] transition-all transform hover:scale-110 active:scale-95"
+                aria-label="WhatsApp Contact"
+              >
+                <WhatsAppIcon className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

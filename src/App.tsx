@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import EventDetails from "./pages/EventDetails";
 import AssociationDetails from "./pages/AssociationDetails";
 import ParishWardDetail from "./pages/ParishWardDetail";
+import WhatsAppFloating from "./components/WhatsAppFloating";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppFloating />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

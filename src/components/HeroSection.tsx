@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Facebook, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { WhatsAppIcon } from './WhatsAppFloating';
 
 const HeroSection = () => {
   return (
@@ -50,6 +51,18 @@ const HeroSection = () => {
           aria-label="Instagram"
         >
           <Instagram className="w-4 h-4 text-white" />
+        </motion.a>
+        <motion.a
+          href="https://wa.me/919845364236"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="bg-white/30 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors duration-300 border border-white/50 shadow-lg"
+          aria-label="WhatsApp"
+        >
+          <WhatsAppIcon className="w-4 h-4 text-white" />
         </motion.a>
         <motion.a
           href="https://www.youtube.com/@ourladyoflourdeschurchmund957"

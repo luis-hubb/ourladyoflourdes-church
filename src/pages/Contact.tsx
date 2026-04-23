@@ -42,8 +42,8 @@ const Contact = () => {
                     <h3 className="font-opensans font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
                       Our Lady of Lourdes Church<br />
-                      123 Church Street<br />
-                      City, State 12345
+                      Mundalli, Bhatkal<br />
+                      Karnataka 581353
                     </p>
                   </div>
                 </div>
@@ -51,14 +51,14 @@ const Contact = () => {
                   <Phone className="text-pastel-gold mt-1 shrink-0" size={24} />
                   <div>
                     <h3 className="font-opensans font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <p className="text-gray-600">+91 98453 64236</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Mail className="text-pastel-gold mt-1 shrink-0" size={24} />
                   <div>
                     <h3 className="font-opensans font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@ourladyoflourdes.org</p>
+                    <p className="text-gray-600">premofm@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
