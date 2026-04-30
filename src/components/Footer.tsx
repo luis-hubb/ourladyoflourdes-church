@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/our_lady_of_lourdes_official?igsh=MTBkaDI3NWpvYXRpeA%3D%3D" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://wa.me/919845364236" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-pastel-gold transition-colors">
+              <a href="https://wa.me/918762474401" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-pastel-gold transition-colors">
                 <WhatsAppIcon className="w-5 h-5" />
               </a>
               <a href="https://www.youtube.com/@ourladyoflourdeschurchmund957" className="text-gray-300 hover:text-pastel-gold transition-colors">
@@ -68,21 +68,21 @@ const Footer = () => {
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
                   <p className="font-opensans text-gray-300">Sunday Mass</p>
-                  <p className="font-opensans text-sm text-gray-400">8:30 AM - 10:00 AM</p>
+                  <p className="font-opensans text-sm text-gray-400">8:30 AM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
                   <p className="font-opensans text-gray-300">Weekday Mass</p>
-                  <p className="font-opensans text-sm text-gray-400">6:45 AM - 7:30 AM</p>
+                  <p className="font-opensans text-sm text-gray-400">6:45 AM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-pastel-gold mt-1 shrink-0" />
                 <div>
                   <p className="font-opensans text-gray-300">Sunday</p>
-                  <p className="font-opensans text-sm text-gray-400"> 7:30 AM - 8:15 AM (Catechism Class)</p>
+                  <p className="font-opensans text-sm text-gray-400"> 7:30 AM (Catechism Class)</p>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
             <h3 className="font-playfair text-xl font-bold mb-6">Contact Us</h3>
             <div className="space-y-2 font-opensans">
               <p>premofm@gmail.com</p>
-              <p>+91 9482420590</p>
+              <p>+91 87624 74401</p>
             </div>
             <div className="mt-6">
               <a
@@ -119,7 +119,7 @@ const Footer = () => {
             {/* Mobile-only prominent green WhatsApp icon - Aligned to right */}
             <div className="md:hidden self-end">
               <a
-                href="https://wa.me/919845364236"
+                href="https://wa.me/918762474401"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-[#20ba5a] transition-all transform hover:scale-110 active:scale-95"

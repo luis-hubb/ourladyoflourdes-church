@@ -12,7 +12,7 @@ export const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const WhatsAppFloating = () => {
-  const primaryNumber = "+91 98453 64236";
+  const primaryNumber = "+91 87624 74401";
 
   const handleWhatsApp = () => {
     const cleanNumber = primaryNumber.replace(/\D/g, '');
