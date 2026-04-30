@@ -53,7 +53,7 @@ const HeroSection = () => {
           <Instagram className="w-4 h-4 text-white" />
         </motion.a>
         <motion.a
-          href="https://wa.me/919845364236"
+          href="https://wa.me/918762474401"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, x: 20 }}
