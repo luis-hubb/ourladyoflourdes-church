@@ -68,9 +68,9 @@ const PriestInfo = () => {
       <CardContent className="pt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <PriestCard
-            name="Rev. Fr. Premkumar D'souza OFM"
+            name="Rev. Fr. Prashanth Wilson Fernandes OFM"
             role="Parish Priest Of Our Lady of Lourdes Friary (OFM) Mundalli"
-            photoUrl="/images/prem_kumar.jpg"
+            photoUrl="/images/Fr.Prashanth-Wilson.jpg"
             email="parish.priest@church.org"
             phone="+91 1234567890"
           />

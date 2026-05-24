@@ -97,8 +97,8 @@ const Footer = () => {
           >
             <h3 className="font-playfair text-xl font-bold mb-6">Contact Us</h3>
             <div className="space-y-2 font-opensans">
-              <p>premofm@gmail.com</p>
-              <p>+91 87624 74401</p>
+              <p></p>
+              <p>+91 9845364236</p>
             </div>
             <div className="mt-6">
               <a

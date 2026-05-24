@@ -58,7 +58,7 @@ const Contact = () => {
                   <Mail className="text-pastel-gold mt-1 shrink-0" size={24} />
                   <div>
                     <h3 className="font-opensans font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">premofm@gmail.com</p>
+                    <p className="text-gray-600"></p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

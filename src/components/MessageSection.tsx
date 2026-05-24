@@ -81,13 +81,13 @@ const MessageSection = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img 
-                  src="/images/prem_kumar.jpg" 
-                  alt="Rev. Fr. Prem Kumar D'souza"
+                  src="/images/Fr.Prashanth-Wilson.jpg" 
+                  alt="Rev. Fr. Prashanth Wilson Fernandes OFM"
                   className="w-32 h-32 rounded-full object-cover border-4 border-pastel-gold shadow-lg"
                 />
               </div>
               <div className="flex-1 text-left">
-                <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">From Fr. Premkumar D'souza OFM</h3>
+                <h3 className="font-playfair text-2xl font-bold mb-4 text-gray-900">From Fr. Prashanth Wilson Fernandes OFM</h3>
                 <p className="font-opensans text-lg text-gray-700 mb-6 leading-relaxed text-justify">
                   Dear Brothers and Sisters in Christ, grace and peace to you in the name of our Lord Jesus Christ. 
                   I warmly welcome you to the website of Our Lady of Lourdes Church, Mundalli. Our parish is a place where faith comes alive through prayer, the sacraments, and community life. 

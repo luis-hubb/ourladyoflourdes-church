@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 
 const priests = [
     {
-        name: "Rev. Fr. Premkumar D'souza OFM",
+        name: "Rev. Fr. Prashanth Wilson Fernandes OFM",
         role: "Parish Priest",
         image: "/images/prem_kumar.jpg",
         bio: "Leading our parish with wisdom and compassion, serving the faithful with love.",
