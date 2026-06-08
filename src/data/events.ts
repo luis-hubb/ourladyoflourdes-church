@@ -1,4 +1,10 @@
 
+export interface MediaItem {
+  type: 'image' | 'video';
+  src: string;
+  caption?: string;
+}
+
 export interface Event {
   id: string;
   title: string;
@@ -6,20 +12,44 @@ export interface Event {
   time: string;
   location: string;
   description: string;
-  category: 'worship' | 'youth' | 'outreach' | 'bible-study';
+  category: 'worship' | 'youth' | 'outreach' | 'bible-study' | 'Feast';
   image?: string;
+  media?: MediaItem[];
 }
+
+const motherTheresaPhotos = [
+  ...Array.from({ length: 6 }, (_, i) => 643 + i),
+  ...Array.from({ length: 15 }, (_, i) => 650 + i)
+].map((num) => `/images/Mother-th-images/IMG-20260607-WA${String(num).padStart(4, '0')}.jpg`);
+
+const motherTheresaVideos = [
+  '/images/Mother-th-images/83ba06b7edc7436d97b9e76b7f82d04d.mp4',
+  '/images/Mother-th-images/be5c6b517a1f473b896335e62cba8d56.mp4',
+  '/images/Mother-th-images/f36947db7d374034a7b34f3ea3987b17.mp4'
+];
 
 const events: Event[] = [
   {
     id: '1',
-    title: 'Sunday Worship Service',
-    date: '2025-04-20',
-    time: '10:00 AM',
-    location: 'Main Sanctuary',
-    description: 'Join us for our weekly worship service celebrating Easter Sunday with special music and message.',
-    category: 'worship',
-    image: '/placeholder.svg'
+    title: 'St. Mother Theresa Feast',
+    date: '2026-06-07',
+    time: '7:00 PM - 8:30 PM',
+    location: 'St. Mother Theresa Ward',
+    description: 'Celebrate the St. Mother Theresa Feast with a special parish gathering, presentations, music, and fellowship. Enjoy the vibrant ward celebration with photos from the event.',
+    category: 'Feast',
+    image: '/images/Mother-th-images/st-mother.jpg',
+    media: [
+      ...motherTheresaPhotos.map((src): MediaItem => ({
+        type: 'image',
+        src,
+        caption: 'St. Mother Theresa Fiesta photo'
+      })),
+      ...motherTheresaVideos.map((src): MediaItem => ({
+        type: 'video',
+        src,
+        caption: 'St. Mother Theresa Fiesta video'
+      }))
+    ]
   },
   {
     id: '2',

@@ -5,12 +5,23 @@ import { Calendar, Clock, MapPin, ArrowLeft } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import events from '@/data/events';
 import Footer from '@/components/Footer';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const EventDetails = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [event, setEvent] = useState<typeof events[0] | null>(null);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const heroImages = event
+    ? event.media?.filter(item => item.type === 'image').map(item => item.src) ?? []
+    : [];
+
+  const heroImage = event?.image || heroImages[0] || '/placeholder.svg';
+  const galleryMedia = event?.media
+    ? event.media.filter(item => item.src !== heroImage)
+    : [];
 
   useEffect(() => {
     // Simulate API call to fetch event details
@@ -30,6 +41,14 @@ const EventDetails = () => {
 
   const handleBack = () => {
     navigate(-1); // Go back to the previous page in history
+  };
+
+  const handleImageClick = (src: string) => {
+    setSelectedImage(src);
+  };
+
+  const handleLightboxClose = () => {
+    setSelectedImage(null);
   };
 
   if (loading) {
@@ -70,11 +89,13 @@ const EventDetails = () => {
             transition={{ duration: 0.5 }}
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
-            <div className="h-64 md:h-96 bg-gray-200 relative">
-              <div 
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${event.image || '/placeholder.svg'})` }}
-              ></div>
+            <div className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+              <img
+                src={heroImage}
+                alt={event.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
               <div className="absolute top-4 right-4 bg-pastel-gold text-white text-sm font-bold px-4 py-2 rounded-full">
                 {event.category.replace('-', ' ')}
               </div>
@@ -112,13 +133,63 @@ const EventDetails = () => {
               <div className="prose prose-lg max-w-none">
                 <h2 className="font-playfair text-2xl font-bold mb-4">About This Event</h2>
                 <p className="text-gray-700">{event.description}</p>
-                
-                <h2 className="font-playfair text-2xl font-bold mt-8 mb-4">Additional Information</h2>
-                <p className="text-gray-700">
-                  We look forward to seeing you at this event. Please arrive a few minutes early to get settled in. 
-                  If you have any questions or need to make special arrangements, please contact our church office.
-                </p>
               </div>
+
+              {galleryMedia.length > 0 && (
+                <div className="mt-10">
+                  <h2 className="font-playfair text-2xl font-bold mb-6">{event.title} Gallery</h2>
+                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {galleryMedia.map((item, index) => (
+                      <div key={index} className="rounded-3xl overflow-hidden bg-gray-100 shadow-sm">
+                        <div className="aspect-[4/3] overflow-hidden w-full bg-black">
+                          {item.type === 'video' ? (
+                            <video
+                              controls
+                              className="w-full h-full object-cover"
+                              src={item.src}
+                            >
+                              Sorry, your browser doesn’t support embedded videos.
+                            </video>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => handleImageClick(item.src)}
+                              className="h-full w-full"
+                            >
+                              <img
+                                src={item.src}
+                                alt={item.caption || event.title}
+                                className="w-full h-full object-cover transition-transform duration-200 hover:scale-105"
+                                onError={(e) => {
+                                  e.currentTarget.src = '/placeholder.svg';
+                                }}
+                              />
+                            </button>
+                          )}
+                        </div>
+                        {item.caption && (
+                          <div className="p-3 bg-white">
+                            <p className="text-sm text-gray-600">{item.caption}</p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <Dialog open={!!selectedImage} onOpenChange={(open) => {
+                if (!open) handleLightboxClose();
+              }}>
+                <DialogContent className="sm:max-w-5xl">
+                  {selectedImage && (
+                    <img
+                      src={selectedImage}
+                      alt="Expanded gallery"
+                      className="w-full max-h-[80vh] object-contain"
+                    />
+                  )}
+                </DialogContent>
+              </Dialog>
 
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h3 className="font-playfair text-xl font-bold mb-4">Interested in More Events?</h3>

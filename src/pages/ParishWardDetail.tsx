@@ -79,8 +79,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward4',
     name: 'St. Mother Teresa Ward',
-    mainImage: '/images/mother-ward.jpg',
-    images: ['/images/mother-ward.jpg'],
+    mainImage: '/images/Mother-th-images/st-mother.jpg',
+    images: ['/images/Mother-th-images/st-mother.jpg'],
     description: 'St. Mother Teresa Ward is committed to enhancing our liturgical life through sacred music. This ward brings harmony to worship services by nurturing the musical talents of members. The choir\'s beautiful hymns help the congregation connect more deeply with their faith.',
     leader: 'Mrs. Rose D\'Souza',
     contact: '+91 9876543213',
