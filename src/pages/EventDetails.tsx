@@ -19,9 +19,8 @@ const EventDetails = () => {
     : [];
 
   const heroImage = event?.image || heroImages[0] || '/placeholder.svg';
-  const galleryMedia = event?.media
-    ? event.media.filter(item => item.src !== heroImage)
-    : [];
+  // Include all media in the gallery (don't filter out the hero image)
+  const galleryMedia = event?.media ?? [];
 
   useEffect(() => {
     // Simulate API call to fetch event details

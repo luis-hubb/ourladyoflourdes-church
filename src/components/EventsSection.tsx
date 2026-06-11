@@ -123,7 +123,7 @@ const EventsSection = () => {
                     to={`/events/${event.id}`} 
                     className="text-pastel-gold hover:text-amber-600 transition-colors font-medium"
                   >
-                    Learn more &rarr;
+                    View All &rarr;
                   </Link>
                 </div>
               </div>

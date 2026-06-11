@@ -18,9 +18,21 @@ export interface Event {
 }
 
 const motherTheresaPhotos = [
-  ...Array.from({ length: 6 }, (_, i) => 643 + i),
-  ...Array.from({ length: 15 }, (_, i) => 650 + i)
-].map((num) => `/images/Mother-th-images/IMG-20260607-WA${String(num).padStart(4, '0')}.jpg`);
+  '/images/Mother-th-images/IMG-20260607-WA0643.jpg',
+    '/images/Mother-th-images/IMG-20260607-WA0662.jpg',
+      '/images/Mother-th-images/IMG-20260607-WA0659.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0644.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0652.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0653.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0656.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0657.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0658.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0660.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0661.jpg',
+  '/images/Mother-th-images/IMG-20260607-WA0663.jpg',
+  '/images/Mother-th-images/NEW.jpg',
+  '/images/Mother-th-images/st-mother.jpg'
+];
 
 const motherTheresaVideos = [
   '/images/Mother-th-images/83ba06b7edc7436d97b9e76b7f82d04d.mp4',
