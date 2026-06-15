@@ -30,8 +30,8 @@ const parishWards: ParishWard[] = [
   {
     id: 'ward2',
     name: 'St. Antony Ward',
-    mainImage: '/images/st-anthony.jpg',
-    images: ['/images/st-anthony.jpg', '/images/st-anthony1.jpg', '/images/st-anthony2.jpg'],
+    mainImage: '/images/St%20Antony/21.jpg',
+    images: ['/images/St%20Antony/21.jpg', '/images/St%20Antony/1.jpg', '/images/St%20Antony/2.jpg'],
     description: 'St. Antony Ward is dedicated to deepening the Marian devotion of our parish families. This ward provides a nurturing space for prayer, service, and spiritual reflection. Families unite here to engage in meaningful community works and daily Rosary sessions.',
     leader: 'Mrs. Mary Fernandes',
     contact: '+91 9876543211',

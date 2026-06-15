@@ -55,9 +55,9 @@ const EventsSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <span className="inline-block h-1 w-24 bg-pastel-gold mb-4"></span>
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-6">Upcoming Events</h2>
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-6">Recent and Current Events</h2>
           <p className="font-opensans text-gray-600 max-w-2xl mx-auto">
-            Join us for worship services, community outreach, Bible studies, and other special events.
+            Covering recently held and current parish events, including worship services, outreach, Bible studies, and special celebrations.
           </p>
         </div>
 

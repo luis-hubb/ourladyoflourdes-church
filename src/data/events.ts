@@ -40,9 +40,50 @@ const motherTheresaVideos = [
   '/images/Mother-th-images/f36947db7d374034a7b34f3ea3987b17.mp4'
 ];
 
+const stAnthonyPhotos = [
+  '/images/St%20Antony/1st.jpg',
+  '/images/St%20Antony/1.jpg',
+  '/images/St%20Antony/2.jpg',
+  '/images/St%20Antony/3.jpg',
+  '/images/St%20Antony/4.jpg',
+  '/images/St%20Antony/5.jpg',
+  '/images/St%20Antony/6.jpg',
+  '/images/St%20Antony/7.jpg',
+  '/images/St%20Antony/8.jpg',
+  '/images/St%20Antony/9.jpg',
+  '/images/St%20Antony/10.jpg',
+  '/images/St%20Antony/11.jpg',
+  '/images/St%20Antony/12.jpg',
+  '/images/St%20Antony/13.jpg',
+  '/images/St%20Antony/14.jpg',
+  '/images/St%20Antony/15.jpg',
+  '/images/St%20Antony/16.jpg',
+  '/images/St%20Antony/17.jpg',
+  '/images/St%20Antony/18.jpg',
+  '/images/St%20Antony/19.jpg',
+  '/images/St%20Antony/20.jpg',
+  '/images/St%20Antony/21.jpg',
+  '/images/St%20Antony/22.jpg',
+];
+
 const events: Event[] = [
   {
     id: '1',
+    title: 'St. Anthony Ward Feast',
+    date: '2026-06-14',
+    time: '7:00 PM - 8:30 PM',
+    location: 'St. Anthony Ward (Starwin Louis House)',
+    description: 'Highlights from the St. Anthony celebration, featuring worship, fellowship, and a photo gallery of the event.',
+    category: 'Feast',
+    image: '/images/St%20Antony/21.jpg',
+    media: stAnthonyPhotos.map((src): MediaItem => ({
+      type: 'image',
+      src,
+      caption: 'St. Anthony event photo'
+    }))
+  },
+  {
+    id: '2',
     title: 'St. Mother Theresa Feast',
     date: '2026-06-07',
     time: '7:00 PM - 8:30 PM',
@@ -62,16 +103,6 @@ const events: Event[] = [
         caption: 'St. Mother Theresa Fiesta video'
       }))
     ]
-  },
-  {
-    id: '2',
-    title: 'Youth Group Meeting',
-    date: '2025-04-24',
-    time: '6:30 PM',
-    location: 'Youth Center',
-    description: 'Weekly gathering for teenagers with games, worship, and Bible study.',
-    category: 'youth',
-    image: '/placeholder.svg'
   },
   {
     id: '3',
